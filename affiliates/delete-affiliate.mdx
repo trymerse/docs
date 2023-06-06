@@ -1,0 +1,41 @@
+import { FailedRequest } from "../../../components/docs/FailedRequest";
+import { SuccessfulRequest } from "../../../components/docs/SuccessfulRequest";
+
+# Delete Affiliate
+
+```bash
+POST https://api.trymerse.com/affiliate/delete
+```
+
+Deletes an affiliate from your Merse workspace. 
+
+## Example Request
+```bash
+curl 
+```
+
+## Request Body
+
+## Response
+
+### Successful
+
+<SuccessfulRequest/>
+
+```json
+{
+  "success": true,
+  "message": "Affiliate deleted successfully"
+}
+```
+
+### Failed
+
+<FailedRequest/>
+
+```json
+{
+  "success": false,
+  "message": "Affiliate not found"
+}
+```

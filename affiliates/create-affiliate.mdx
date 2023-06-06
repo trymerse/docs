@@ -1,0 +1,47 @@
+import { FailedRequest } from "../../../components/docs/FailedRequest";
+import { SuccessfulRequest } from "../../../components/docs/SuccessfulRequest";
+import { RequestParams } from "../../../components/docs/RequestParam";
+
+# Create Affiliate 
+
+```bash
+POST https://api.trymerse.com/v1/affiliate/create
+``` 
+Creates and affiliate for your Merse Workspace.
+
+## Example Request
+```bash
+curl
+```
+
+## Request Body
+<RequestParams title="name" type="string" required={true} description="Name of the person you are trying to make an affiliate."/>
+<RequestParams title="email" type="string" required={true} description="Email of the person you are trying to make an affiliate."/>
+<RequestParams title="ref_id" type="string" required={true} description="Unique referral ID of the person you trying to make an affiliate."/>
+
+## Request Headers
+<RequestParams title="access_token" type="string" required={true} description="Access token for your workspace generated from the settings team on the Merse web application." />
+
+## Response
+
+### Successful
+
+<SuccessfulRequest />
+
+```json
+{
+  "success": true, 
+  "message": "Affiliate Created Successfully"
+}
+```
+
+### Failed
+
+<FailedRequest />
+
+```json 
+{
+  "success": false, 
+  "message": "Request Failed"
+}
+```
